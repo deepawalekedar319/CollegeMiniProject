@@ -1,0 +1,17 @@
+<!doctype html>
+{%extends 'digital/base.html'%}
+{%block base%}
+    <button class="back" onClick="javascript:history.go(-1);">back</button>
+	<hr>
+	<div id="oupdf">
+		  <form method='get' action='/search'>
+		    <input type="text" placeholder="Search" name='query' id='query' style="border-radius:10px;">
+			<button type="submit" style="border-radius:30px;">Search</button>
+		  </form>
+		<br>
+		{%for p in pdf%}
+		{{p.dept}} : 
+			<a href="{{p.oufiles.url}}" target="search.html">{{p.pdfname}}</a>&nbsp;&nbsp;<a href="{{p.oufiles.url}}" download style="color:red;">Download</a><br>
+	{%endfor%}
+	</div>
+{%endblock%}

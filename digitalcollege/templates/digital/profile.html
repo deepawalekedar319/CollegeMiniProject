@@ -1,0 +1,53 @@
+<!doctype html>
+{%extends 'digital/base.html'%}
+{%block base%}
+	<a href="/"><button class="back">back</button></a>
+	<hr>									    
+	<div id="profile">
+		<table border="1" align="left">
+			<tr>
+				<td>First Name</td>
+				<td>{{details.firstname}}</td>
+			</tr>
+			<tr>
+				<td>Last Name</td>
+				<td>{{details.lastname}}</td>
+			</tr>
+			<tr>
+				<td>Roll Number</td>
+				<td>{{details.rollno}}</td>
+			</tr>
+			<tr>
+				<td>Attendence </td>
+				<td>: {{details.attendence}}</td>
+			</tr>
+			<tr>
+				<td>Username</td>
+				<td>{{details.stu}}</td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td>{{details.stu_email}}</td>
+			</tr>
+			<tr>
+				<td>Microsoft Email</td>
+				<td>{{details.micro_email}}</td>
+			</tr>
+			<tr>
+				<td>Branch</td>
+				<td>{{details.branch}}</td>
+			</tr>
+			<tr>
+				<td>Semester</td>
+				<td>{{details.stu_sem}}</td>
+			</tr>
+			<tr>
+				<td>Year</td>
+				<td>{{details.stu_year}}</td>
+			</tr>
+		</table><br>
+	<div><br>
+	<br><br><br><br><br><br><br><br><br><h4><u><strong>Note : </strong></u></h4>
+	<h4>For any changes or updates please contact to HOD.</h4>
+		<h4>Send mail to HOD <a href="/My-updates-page">Send mail.</a></h4>
+{%endblock%}

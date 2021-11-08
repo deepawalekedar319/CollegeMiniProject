@@ -1,0 +1,19 @@
+<!doctype html>
+{%extends 'digital/base.html'%}
+{%block base%}
+	<a href="/"><button class="back">back</button></a>
+	<hr>		
+	{%if send%}
+			<marquee width="95%" direction="left" height="100px" style = "color:blue;font-size:60px;">
+				Your updates has successfully sent.</marquee> <br>
+			<marquee width="95%" direction="left" height="100px" style = "color:blue;font-size:60px;">
+				You will get response soon.
+			</marquee>
+		{%else%}
+	<form method="post" style="margin:10px;">
+		{{form.as_p}}
+		{%csrf_token%}
+		<input type="submit" value = "send" class="btn1">
+	</form>
+	{%endif%}
+{%endblock%}	

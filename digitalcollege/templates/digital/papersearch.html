@@ -1,0 +1,21 @@
+<!doctype html>
+{%extends 'digital/base.html'%}
+{%block base%}
+	<a href="/"><button class="back">Home</button></a>
+	<a href="/previous-papers"><button class="back">back</button></a>
+	<hr>
+	{%for sub in subject%}
+		<img src="{{sub.image.url}}" height="300" width="300" class="images">
+		<p><strong>Branch :</strong> {{sub.dept}} , {{sub.year}} year</p>
+		<p><strong>Year :</strong> {{sub.paper_year}}</p>
+		<p><strong>Subject :</strong> {{sub.subject}}</p>
+		<p><strong>Description : </strong>{{sub.desc}}</p><hr>
+	{%endfor%}
+	{%for d in desc%}
+		<img src="{{d.image.url}}" height="300" width="300" class="images">
+		<p><strong>Branch :</strong> {{d.dept}} , {{d.year}} year</p>
+		<p><strong>Year :</strong> {{d.paper_year}}</p>
+		<p><strong>Subject :</strong> {{d.subject}}</p>
+		<p><strong>Description : </strong>{{d.desc}}</p><hr>
+	{%endfor%}
+{%endblock%}

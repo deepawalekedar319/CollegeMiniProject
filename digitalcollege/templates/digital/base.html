@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Digital College</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<style>
+			.android{
+			position: relative;
+			width: 360px;
+			height: 650px;
+			margin: auto;
+			border: 16px black solid;
+			border-top-width: 60px;
+			border-bottom-width: 60px;
+			border-radius: 36px;
+		}
+		.android:after{
+			content: '';
+			display: block;
+			width: 60px;
+			height: 5px;
+			position: absolute;
+			top: -30px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: #333;
+			border-radius: 10px;
+		}
+		.android:before{
+			content: '';
+			display: block;
+			width: 35px;
+			height: 35px;
+			position: absolute;
+			left: 50%;
+			bottom: -65px;
+			transform: translate(-50%, -50%);
+			background: #333;
+			border-radius: 50%;
+			}
+			.content{
+				height:500px;
+				position:absolute;
+				top:"80px;
+				bottom:0;
+				left:0;
+				right:0;
+				overflow:auto;
+			}
+		#image{
+			transform:translate(50%,50%);
+			padding-top:5px;
+		}
+		.btn1{
+			background:#ede9df;
+			color:black;
+			margin-top:10px;
+			margin-right:30px;
+			margin-bottom:40px;
+			margin-left:25px;
+			height:70px;
+			width:30%;
+			border-radius:10px;
+			border:1px solid black;
+		}
+		.btn2{
+			background:#ede9df;
+			color:black;
+			float:right;
+			margin-top:10px;
+			margin-right:25px;
+			height:70px;
+			width:30%;
+			border-radius:10px;
+			border:1px solid black;
+		}
+		.back{
+			margin-left:10px;
+			border-radius:30px;
+		}
+		#graph{
+			margin:40px;
+			margin-top:76px;
+		}
+		#oupdf{
+			margin:20px;
+			padding:10px;
+			margin-top:30px;
+
+		}
+		.images{
+			margin:4px;
+			border:1px solid black;
+		}
+		.gauge {
+			width: 100%;
+			max-width: 250px;
+			font-family: "Roboto", sans-serif;
+			font-size: 32px;
+			color: #004033;
+		}
+		.gauge__body {
+			width: 100%;
+			height: 0;
+			padding-bottom: 50%;
+			background: #b4c0be;
+			position: relative;
+			border-top-left-radius: 100% 200%;
+			border-top-right-radius: 100% 200%;
+			overflow: hidden;
+		}
+		.gauge__fill {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: inherit;
+			height: 100%;
+			background: #009578;
+			transform-origin: center top;
+			transform: rotate(0.25turn);
+			transition: transform 0.2s ease-out;
+		}
+		.gauge__cover {
+			width: 75%;
+			height: 150%;
+			background: #ffffff;
+			border-radius: 50%;
+			position: absolute;
+			top: 25%;
+			left: 50%;
+			transform: translateX(-50%);
+			/* Text */
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding-bottom: 25%;
+			box-sizing: border-box;
+		}
+		.dropbtn {
+			background-color: #3498DB;
+			color: black;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+		}
+		.upload-dropbtn {
+			background-color: #c3cad6;
+			border-radius:20px;
+			color: black;
+			padding: 16px;
+			font-size: 16px;
+			border: none;
+		}
+		.dropup {
+			position: relative;
+			display: inline-block;
+		}
+		.upload-dropup {
+			 position: relative; 
+			 /* position:fixed; */
+			 /* position: absolute; */
+			margin-left:132px;
+			display: inline-block;
+		}
+		.dropup-content {
+			display: none;
+			position: absolute;
+			background-color: #f1f1f1;
+			min-width: 160px;
+			bottom: 50px;
+			z-index: 1;
+		}
+		.upload-content {
+			display: none;
+			position: absolute;
+			background-color: #f1f1f1;
+			min-width: 160px;
+			bottom: 50px;
+			z-index: 1;
+		}
+		.dropup-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+		.upload-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+		.dropup-content a:hover {background-color: #ccc}
+		.dropup:hover .dropup-content {
+			display: block;
+		}
+		.upload-content a:hover {background-color: #ccc}
+		.upload-dropup:hover .upload-content {
+			display: block;
+		}
+		.dropup:hover .dropbtn {
+			background-color: #2980B9;
+		}
+		.upload-dropup:hover .upload-dropbtn {
+			background-color: #dee8be;
+		}
+		#dept{
+			background:#ede9df;
+			margin-top:10px;
+			margin-right:30px;
+			margin-bottom:40px;
+			margin-left:25px;
+			height:70px;
+			width:65%;
+			border-radius:10px;
+			border:1px solid black;
+		}
+		.dropbtn {
+			background-color: white;
+			color: black;
+			padding: 10px;
+			font-size: 16px;
+			border: none;
+			cursor: pointer;
+		}
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+		
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		}
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}	
+		.dropdown-content a:hover {background-color: #f1f1f1}
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+		.dropdown:hover .dropbtn {
+			background-color: gray;
+		}
+		th,td{
+			text-align:center;
+			border:1px solid black;
+		}
+		#profile,td{
+			font-size:14px;
+			margin:10px;
+			
+		}
+		
+	</style>
+ </head>
+ <body>
+	<div class="android">
+		<div class="content">
+			<div class="dropdown">
+				 <button class="dropbtn"><span class="glyphicon glyphicon-menu-hamburger"></button>
+				 <div class="dropdown-content">
+					<a href="/"><span class="glyphicon glyphicon-home">&nbsp;Home</a>
+					<a href="/My-profile"><span class="glyphicon glyphicon-pencil">&nbsp;My&nbsp;profile</a>
+					<a href="/Time-Table-Chart"><span class="glyphicon glyphicon-time">&nbsp;Time table</a>
+					<a href="#"><span class="glyphicon glyphicon-flag">&nbsp;Mid-marks</a>
+					<a href="/Syllabus-Chart"><span class="glyphicon glyphicon-duplicate">&nbsp;Syllabus</a>
+					<a href="/previous-papers"><span class="glyphicon glyphicon-list-alt">&nbsp;Previous papers</a>
+					<a href="/Raise-your-query"><span class="glyphicon glyphicon-question-sign">&nbsp;Raise Query</a>
+					<a href="https://methodist.edu.in/"><span class="glyphicon glyphicon-chevron-right">&nbsp;Website</a>
+					<a href="https://www.youtube.com/results?search_query=methodist+college+of+engineering+and+technology+abids"><span class="glyphicon glyphicon-facetime-video">&nbsp;Youtube</a>
+					<a href="/accounts/logout"><span class="glyphicon glyphicon-log-out">&nbsp;Logout</a>
+				 </div>
+			</div>
+			<img id = "image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7Z0voxAMt2N6Y7jakGo5FwH4QKBfZVodJtg&usqp=CAU" width="120" height="50"><br><br>
+			{%block base%}
+			{%endblock%}
+		</div>
+	</div>
+ </body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+{%extends 'digital/base.html'%}
+{%block base%}
+	<a href="/"><button class="back">back</button></a>
+	<hr>
+	<div id="oupdf">
+		{%for h in hod%}
+		<h3><u><strong>Department :</strong> {{h.hod_dept}}</u></h3><br>
+		<h6><strong>Head of department : </strong><strong><em><u>{{h.hod}}</u></em></strong></h6>
+		<p><strong>Number :</strong> {{h.hod_pno}}</p>
+		<p><strong>Email :</strong> {{h.hod_email}}</p>
+		<a href="/Share-mail" style="color:red;">Send mail</a><hr>
+	{%endfor%}
+		<h4><u>CSE Facuilty</u></h4>
+	{%for c in cse%}
+		<hr><br><p><strong>Name : </strong>{{c}}</p>
+		<p><strong>Number :</strong> {{c.pno}}</p>
+		<p><strong>Email : </strong>{{c.email}}</p>
+		<a href="/Share-mail" style="color:red;">Send mail</a><br>
+	{%endfor%}
+	</div>
+{%endblock%}

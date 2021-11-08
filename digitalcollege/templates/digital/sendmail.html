@@ -1,0 +1,21 @@
+<!doctype html>
+{%extends 'digital/base.html'%}
+{%block base%}	
+	<a href="/"><button class="back">Home</button></a>
+	<input type="button" onClick="javascript:history.go(-1);" value="Back" style="border-radius:30px;">
+	<hr>
+		{%if send%}
+			<marquee width="95%" direction="left" height="100px" style = "color:blue;font-size:60px;">
+				Your mail has successfully send.</marquee> <br>
+			<marquee width="95%" direction="left" height="100px" style = "color:blue;font-size:60px;">
+				You will get response soon.
+			</marquee>
+		{%else%}
+		<h4 style="margin-left:90px;"><strong><u>Send Mail</u></strong> </h4><br>
+	<form method="post">
+		{{form.as_p}}
+		{%csrf_token%}
+		<input type="submit" class="btn1" value="Send Mail">
+	</form>
+	{%endif%}
+{%endblock%}

@@ -1,0 +1,25 @@
+<!doctype html>
+{%extends 'digital/base.html'%}
+{%block base%}
+	<a href="/"><button class="back">Home</button></a>
+	<a href="/College-events-images"><button class="back">back</button></a>
+	<hr>
+	{%for sub in title%}
+		<img src="{{sub.image.url}}" height="auto" width="auto" class="images">
+		<p><strong>Title :</strong> {{sub.title}}</p>
+		<p><strong>published on:</strong> {{sub.publish}}</p>
+		<p><strong>Description : </strong>{{sub.desc}}</p><hr>
+	{%endfor%}
+	{%for d in desc%}
+		<img src="{{d.image.url}}" height="auto" width="auto" class="images">
+		<p><strong>Title :</strong> {{d.title}}</p>
+		<p><strong>published on:</strong> {{d.publish}}</p>
+		<p><strong>Description : </strong>{{d.desc}}</p><hr>
+	{%endfor%}
+	{%for p in publish%}
+		<img src="{{p.image.url}}" height="auto" width="auto" class="images">
+		<p><strong>Title :</strong> {{p.title}}</p>
+		<p><strong>published on:</strong> {{p.publish}}</p>
+		<p><strong>Description : </strong>{{p.desc}}</p><hr>
+	{%endfor%}
+{%endblock%}

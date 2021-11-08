@@ -1,0 +1,12 @@
+<!doctype html>
+{%extends 'digital/base.html'%}
+{%block base%}
+	<a href="/"><button class="back">Home</button></a>
+	<a href="/latest-osmania-notes"><button class="back">back</button></a>
+	<hr>
+	<div id="oupdf">
+		{%for p in pdf%}
+			<a href="{{p.oufiles.url}}">{{p.pdfname}}</a>&nbsp;&nbsp;<a href="{{p.oufiles.url}}" download style="color:red;">Download</a>	<br>
+	{%endfor%}
+	</div>
+{%endblock%}

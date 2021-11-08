@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Digital College</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<style>
+			.android{
+			position: relative;
+			width: 360px;
+			height: 650px;
+			margin: auto;
+			border: 16px black solid;
+			border-top-width: 60px;
+			border-bottom-width: 60px;
+			border-radius: 36px;
+		}
+		.android:after{
+			content: '';
+			display: block;
+			width: 60px;
+			height: 5px;
+			position: absolute;
+			top: -30px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: #333;
+			border-radius: 10px;
+		}
+		.android:before{
+			content: '';
+			display: block;
+			width: 35px;
+			height: 35px;
+			position: absolute;
+			left: 50%;
+			bottom: -65px;
+			transform: translate(-50%, -50%);
+			background: #333;
+			border-radius: 50%;
+			}
+			.content{
+				height:500px;
+				position:absolute;
+				top:"80px;
+				bottom:0;
+				left:0;
+				right:0;
+				overflow:auto;
+			}
+		#image{
+			transform:translate(26%,10%);
+			padding-top:5px;
+		}
+		.back{
+			margin-left:10px;
+			border-radius:30px;
+		}
+	</style>
+ </head>
+ <body>
+			<div class="android">
+			<div class="content">
+			<img id = "image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7Z0voxAMt2N6Y7jakGo5FwH4QKBfZVodJtg&usqp=CAU" width="220" height="100"><br><br>
+			{%block privacy%}
+			{%endblock%}
+		</div>
+	</div>
+		</div>
+	</div>
+ </body>
+</html>

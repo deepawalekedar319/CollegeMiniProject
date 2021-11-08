@@ -1,0 +1,22 @@
+<!doctype html>
+{%extends 'digital/base.html'%}
+{%block base%}
+	<a href="/"><button class="back">back</button></a>
+	<hr>
+	<h4>Books you have borrowed : {{total}}/9</h4><br>
+	<table border="2">
+		<thead>
+			<th>Name of the book</th>
+			<th>Borrowed date</th>
+			<th>Valid date</th>
+		</thead>
+		{%for s in student%}
+		<tr>
+			<td>{{s.book_name}}</td>
+			<td>{{s.borrowed_date}}</td>
+			<td>{{s.valid_date}}</td>
+		</tr>
+		{%endfor%}
+	</table><br>
+	<a href="/latest-osmania-notes"><button class="btn1" style="margin-left:90px;">Go to digital library</button></a>
+{%endblock%}

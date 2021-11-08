@@ -1,0 +1,30 @@
+<!doctype html>
+{%extends 'digital/base.html'%}
+{%block base%}
+	<a href="/"><button class="back">back</button></a>
+	<hr>		System check identified no issues (0 silenced).
+March 04, 2021 - 11:25:24
+Django version 3.1.5, using settings 'digitalcollege.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[04/Mar/2021 11:25:29] "GET / HTTP/1.1" 200 7988
+Not Found: /favicon.ico
+[04/Mar/2021 11:25:30] "GET /favicon.ico HTTP/1.1" 404 5775
+[04/Mar/2021 11:25:33] "GET /get-my-saved-documents/ HTTP/1.1" 200 7426System check identified no issues (0 silenced).
+March 04, 2021 - 11:25:24
+Django version 3.1.5, using settings 'digitalcollege.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+[04/Mar/2021 11:25:29] "GET / HTTP/1.1" 200 7988
+Not Found: /favicon.ico
+[04/Mar/2021 11:25:30] "GET /favicon.ico HTTP/1.1" 404 5775
+[04/Mar/2021 11:25:33] "GET /get-my-saved-documents/ HTTP/1.1" 200 7426
+	<br><br>
+	<div class="upload-dropup">
+		<button class="upload-dropbtn">	<span class="glyphicon glyphicon-file"></button>
+		<div class="upload-content">
+			<a href="">Upload from this device</a>
+			<a href="/Create-my-file">Create</a>
+		</div>
+	</div>
+{%endblock%}

@@ -1,0 +1,10 @@
+<!doctype html>
+{%extends 'digital/privacy.html'%}
+{%block privacy%}
+	<form method="post" style="margin:50px;padding:20px;">
+		{{form.as_p}}
+		{%csrf_token%}
+		<button type="submit" style="border-radius:30px;">Login</button><br><br>
+		<a href="/password_reset">Forgot password ?</a>
+	</form>
+{%endblock%}

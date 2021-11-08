@@ -1,0 +1,20 @@
+<!doctype html>
+{%extends 'digital/base.html'%}
+{%block base%}
+	<a href="/"><button class="back">back</button></a>
+	<hr>
+	<div id="oupdf">
+		  <form method='get' action='/Search-college-events-images'>
+		    <input type="text" placeholder="Search" name='query' id='query' style="border-radius:10px;">
+			<button type="submit" style="border-radius:30px;">Search</button>
+		  </form>
+		<br>
+		<div class="row">
+			<div class="column">
+				{%for image in images%}
+					<img src="{{image.image.url}}" height="170" width="auto" class="images"> <br><a href="{{image.get_absolute_image}}">{{image.desc}}</a><br><br>
+				{%endfor%}
+			</div>
+		</div>
+	</div>
+{%endblock%}

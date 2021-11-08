@@ -1,0 +1,11 @@
+<!doctype html>
+{%extends 'digital/base.html'%}
+{%block base%}
+	<a href="/"><button class="back">Home</button></a>
+	<a href="/College-events-images"><button class="back">back</button></a>
+	<hr>
+	<img src="{{image.image.url}}" height="auto" width="auto" class="images">
+	<p><strong>Title :</strong> {{image.title}}</p>
+	<p><strong>Posted on :</strong> {{image.publish}}</p>
+	<p><strong>Description : </strong>{{image.desc}}</p>
+{%endblock%}

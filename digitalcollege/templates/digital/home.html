@@ -1,0 +1,22 @@
+<!doctype html>
+{%extends 'digital/base.html'%}
+{%block base%}
+	<h3>&nbsp;Hello {{details.firstname}},</h3>
+	<hr> 
+	<a href="/attendence-chart"><button class ="btn1"><span class="glyphicon glyphicon-user"><br>Attendence</button></a>
+	<a href="/College-library"><button class ="btn2"><span class="glyphicon glyphicon-book"><br>Library</button><br></a>
+	<div class="dropup"> 
+	<button class="dropbtn" id="dept"><span class="glyphicon glyphicon-education"><br>Department</button>
+	<div class="dropup-content">
+		<a href="/CSE-Facuilty">CSE</a>
+		<a href="/EEE-Facuilty">EEE</a>
+		<a href="/ECE-Facuilty">ECE</a>
+		<a href="#">MECH</a>
+		<a href="#">MBA</a>
+	</div>
+</div>			
+	<a href="/College-events-images"><button class ="btn2"><span class="glyphicon glyphicon-picture"><br>Gallary</button><br></a>
+	<a href="/get-my-saved-documents"><button class ="btn1">Documents</button></a>
+	<a href="/get-my-results"><button class ="btn2">Results</button><br></a>
+{%endblock%}
+
